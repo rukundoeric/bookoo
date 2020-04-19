@@ -7,6 +7,9 @@
     "start": "serve -s ./build",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "dev:open": "webpack-dev-server --config webpack.config.dev.js --open",
+    "clean:build": "rimraf ./build && mkdir build",
+    "prebuild": "yarn clean:build",
+    "build": "webpack --config webpack.config.prod.js",
     "heroku-postbuild": "yarn build"
   },
   "author": "Rukundo Eric",
