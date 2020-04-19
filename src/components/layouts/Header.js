@@ -7,10 +7,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import Menu from '@material-ui/icons/Menu';
+import Search from '../widgets/Search';
+import logo from '../../assets/images/logo.png';
 
 import styles from '../../assets/jss/header';
 
@@ -53,7 +54,7 @@ export default function Header(props) {
   });
 
   const {
-    color, rightLinks, leftLinks, brand, fixed, absolute,
+    color, rightLinks, leftLinks, fixed, absolute,
   } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
@@ -63,9 +64,10 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Link href="/" as="/">
-      <Button size="20px" className={classes.title}>
-        {brand}
-      </Button>
+      <div>
+        <img style={{ width: '150px', height: '50px' }} src={logo} alt="Spinner" />
+      </div>
+      {/* <Button className={classes.title}>{brand}</Button> */}
     </Link>
   );
   return (
@@ -84,6 +86,7 @@ export default function Header(props) {
         <Hidden smDown implementation="css">
           {rightLinks}
         </Hidden>
+        <Search />
         <Hidden mdUp>
           <IconButton
             color="inherit"
@@ -132,7 +135,6 @@ Header.propTypes = {
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
-  brand: PropTypes.string,
   fixed: PropTypes.bool,
   absolute: PropTypes.bool,
   changeColorOnScroll: PropTypes.shape({

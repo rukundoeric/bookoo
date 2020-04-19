@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fulfillmentToken fulfillmentType="buy" xmlns="http://ns.adobe.com/adept">
+<distributor>urn:uuid:00000000-0000-0000-0000-000000000001</distributor>
+<operatorURL>http://books.google.com/books/acs4/fulfillment</operatorURL>
+<expiration>2020-04-19T08:43:34-07:00</expiration>
+<transaction>ge:29ee68f7-f741-b1d5-c95a-1a03c8a7ca2b:1587310114131353</transaction>
+<resourceItemInfo>
+<resource>urn:uuid:29ee68f7-f741-b1d5-c95a-1a03c8a7ca2b</resource>
+<resourceItem>1</resourceItem>
+<src>https://books.google.com/books/download/The_Book.epub?acsid=urn:uuid:29ee68f7-f741-b1d5-c95a-1a03c8a7ca2b&amp;output=acs4_book_bytes&amp;dl_type=sample&amp;ar=fb62bee33973649c9e6defe03ae721d9</src>
+<downloadType>simple</downloadType>
+</resourceItemInfo>
+<hmac>vvJyVAokMSR+yXHPudCmU6dyryA=</hmac>
+</fulfillmentToken>
